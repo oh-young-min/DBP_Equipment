@@ -3,6 +3,11 @@
 <body>
 <section th:fragment="rental">
   <h3>대여</h3>
+  <form th:action="@{/rent}" method="post">
+    비품 ID <input type="text" th:field="*{itemId}" placeholder="비품 종류"><br>
+    반납 예정일 <input type="date" th:field="*{returnDate}"><br>
+    <input type="submit" value="신청하기">
+  </form>
 </section>
 </body>
 </html>
